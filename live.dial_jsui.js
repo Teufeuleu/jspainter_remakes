@@ -1,3 +1,6 @@
+// Original code by Ess Mattisson - ess@fors.fm
+// https://discord.com/channels/289378508247924738/1139138726459609138/1286004083051729009
+
 mgraphics.init();
 mgraphics.relative_coords = 0;
 mgraphics.autofill = 0;

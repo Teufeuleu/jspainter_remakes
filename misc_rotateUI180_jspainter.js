@@ -1,3 +1,6 @@
+// Original code by Nicolas K
+// https://cycling74.com/forums/dial-for-indicating-selection#reply-58ed21fdb7244922ce26973d
+
 function paint()
 {
 	var viewsize = mgraphics.size;

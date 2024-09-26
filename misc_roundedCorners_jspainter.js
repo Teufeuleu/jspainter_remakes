@@ -1,3 +1,5 @@
+// Original code by Tyler Mazaika
+// https://discord.com/channels/289378508247924738/1139138726459609138/1263917746148610149
 
 function paint() {
 

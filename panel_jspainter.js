@@ -1,7 +1,7 @@
 // Panel jspainter remake
 // Original code by Nikolas K
 // https://cycling74.com/forums/js-painter-and-itable#reply-58ed21fd6908cf22c8399a67
-//M odified by Théophile Clet
+// Modified by Théophile Clet - contact@tflcl.xyz
 // Special feature allowing per-corner rounding with 'annotation "[0, 0, 0, 0]"' messages
 
 var PI = Math.PI;

@@ -6,7 +6,7 @@ The goal of this repository is to collect simple jsui/jspainter remakes of built
 
 Currently it only contains jspainter files, but it is open to contributions for jsui.
 
-The original commit of this repo include code borrowed from official [Max documentation](https://docs.cycling74.com/max8, the [C74 forum](https://cycling74.com/forums?page=1) and the Max Discord. Original authors, when known, are credited, and a mention is made if the code has been modified.
+The original commit of this repo include code borrowed from official [Max documentation](https://docs.cycling74.com/max8, the [C74 forum](https://cycling74.com/forums?page=1) and the Max Discord. Original authors and potential editors, when known, are credited in each file.
 
 For supercharged alternatives to builtin objects (dial, filtergraph, function, preset...) with additionnal features and slick looks, check the [JSUI showcase](https://github.com/jamesb93/JSUI-Showcase) repo.
 

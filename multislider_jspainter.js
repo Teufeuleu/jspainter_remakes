@@ -1,4 +1,4 @@
-// Original code: Ess and Théophile Clet
+// Original code: Ess Mattisson (ess@fors.fm) and Théophile Clet (contact@tflcl.xyz)
 // https://discord.com/channels/289378508247924738/1139138726459609138/1263913932972753087
 
 function paint() {

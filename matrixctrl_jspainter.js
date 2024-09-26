@@ -1,6 +1,6 @@
 // Original code by Nicolas K
 // https://cycling74.com/forums/jspainter-file-to-override-the-matrixctrl#reply-58ed21f443f50b22d4bba882
-// Edited by Théophile Clet
+// Edited by Théophile Clet - contact@tflcl.xyz
 
 var TWOPI = Math.PI*2;
 var HALFPI = Math.PI*0.5;

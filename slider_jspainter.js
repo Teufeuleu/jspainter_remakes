@@ -1,5 +1,5 @@
 // Original author: Cycling'74
-// Modified by Théophile Clet to better match og. slider
+// Modified by Théophile Clet - contact@tflcl.xyz
 // Handles thickness attribute, and Indicator, Indicator+ and Rectangle knob shapes
 
 var SLIDER_DISPLAYINSET = 5; 

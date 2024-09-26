@@ -1,6 +1,6 @@
-// Original code by Ess
+// Original code by Ess Mattisson - ess@fors.fm
 // https://discord.com/channels/289378508247924738/1139138726459609138/1286004083051729009
-// Edited by Théophile Clet
+// Edited by Théophile Clet - contact@tflcl.xyz
 
 // Only works in 'Vertical' appearance mode
 
