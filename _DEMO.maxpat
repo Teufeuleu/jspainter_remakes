@@ -2,42 +2,17 @@
 	"patcher" : 	{
 		"fileversion" : 1,
 		"appversion" : 		{
-			"major" : 8,
-			"minor" : 6,
-			"revision" : 4,
+			"major" : 9,
+			"minor" : 0,
+			"revision" : 2,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
 		"rect" : [ 120.0, 100.0, 795.0, 830.0 ],
-		"bglocked" : 0,
 		"openinpresentation" : 1,
-		"default_fontsize" : 12.0,
-		"default_fontface" : 0,
-		"default_fontname" : "Arial",
-		"gridonopen" : 1,
 		"gridsize" : [ 15.0, 15.0 ],
-		"gridsnaponopen" : 1,
-		"objectsnaponopen" : 1,
-		"statusbarvisible" : 2,
-		"toolbarvisible" : 1,
-		"lefttoolbarpinned" : 0,
-		"toptoolbarpinned" : 0,
-		"righttoolbarpinned" : 0,
-		"bottomtoolbarpinned" : 0,
-		"toolbars_unpinned_last_save" : 0,
-		"tallnewobj" : 0,
-		"boxanimatetime" : 200,
-		"enablehscroll" : 1,
-		"enablevscroll" : 1,
-		"devicewidth" : 0.0,
-		"description" : "",
-		"digest" : "",
-		"tags" : "",
-		"style" : "",
-		"subpatcher_template" : "",
-		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
 					"id" : "obj-196",
@@ -48,42 +23,16 @@
 					"patcher" : 					{
 						"fileversion" : 1,
 						"appversion" : 						{
-							"major" : 8,
-							"minor" : 6,
-							"revision" : 4,
+							"major" : 9,
+							"minor" : 0,
+							"revision" : 2,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
 						"classnamespace" : "box",
 						"rect" : [ 59.0, 119.0, 640.0, 480.0 ],
-						"bglocked" : 0,
-						"openinpresentation" : 0,
-						"default_fontsize" : 12.0,
-						"default_fontface" : 0,
-						"default_fontname" : "Arial",
-						"gridonopen" : 1,
 						"gridsize" : [ 15.0, 15.0 ],
-						"gridsnaponopen" : 1,
-						"objectsnaponopen" : 1,
-						"statusbarvisible" : 2,
-						"toolbarvisible" : 1,
-						"lefttoolbarpinned" : 0,
-						"toptoolbarpinned" : 0,
-						"righttoolbarpinned" : 0,
-						"bottomtoolbarpinned" : 0,
-						"toolbars_unpinned_last_save" : 0,
-						"tallnewobj" : 0,
-						"boxanimatetime" : 200,
-						"enablehscroll" : 1,
-						"enablevscroll" : 1,
-						"devicewidth" : 0.0,
-						"description" : "",
-						"digest" : "",
-						"tags" : "",
-						"style" : "",
-						"subpatcher_template" : "",
-						"assistshowspatchername" : 0,
 						"boxes" : [ 							{
 								"box" : 								{
 									"id" : "obj-191",
@@ -244,15 +193,13 @@
 								}
 
 							}
- ]
+ ],
+						"originid" : "pat-318"
 					}
 ,
 					"patching_rect" : [ 243.0, 1291.752504999999928, 159.0, 22.0 ],
 					"saved_object_attributes" : 					{
-						"description" : "",
-						"digest" : "",
-						"globalpatchername" : "",
-						"tags" : ""
+						"globalpatchername" : ""
 					}
 ,
 					"text" : "p passthrough_without_loop"
@@ -358,7 +305,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 424.742244243621826, 1836.082371354103088, 193.0, 22.0 ],
-					"presentation_linecount" : 2,
 					"text" : "jspainterfile radiogroup_jspainter.js"
 				}
 
@@ -458,7 +404,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 363.917505383491516, 1979.381332397460938, 169.0, 22.0 ],
-					"presentation_linecount" : 2,
 					"text" : "jspainterfile rslider_jspainter.js"
 				}
 
@@ -1187,7 +1132,8 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 239.175244331359863, 2244.329771161079407, 24.0, 24.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 242.268027663230896, 1276.288588285446167, 24.0, 24.0 ]
+					"presentation_rect" : [ 242.268027663230896, 1276.288588285446167, 24.0, 24.0 ],
+					"svg" : ""
 				}
 
 			}
@@ -1262,11 +1208,12 @@
 					"presentation_rect" : [ 234.020605444908142, 378.350494265556335, 41.0, 48.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
+							"parameter_enum" : [ "a", "b", "c", "d", "e" ],
 							"parameter_longname" : "live.dial[1]",
-							"parameter_modmode" : 3,
+							"parameter_modmode" : 4,
+							"parameter_osc_name" : "<default>",
 							"parameter_shortname" : "live.dial[1]",
-							"parameter_type" : 0,
-							"parameter_unitstyle" : 0
+							"parameter_type" : 0
 						}
 
 					}
@@ -1376,6 +1323,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-45",
+					"jspainterfile" : "newobj_jspainter.js",
 					"maxclass" : "newobj",
 					"numinlets" : 3,
 					"numoutlets" : 1,
@@ -1439,7 +1387,7 @@
 					"presentation" : 1,
 					"presentation_linecount" : 2,
 					"presentation_rect" : [ 522.0, 385.252555370330811, 195.0, 33.0 ],
-					"text" : "Vertical mode only. No text shortening or value unit handling"
+					"text" : "Vertical mode only. No text shortening."
 				}
 
 			}
@@ -1466,7 +1414,7 @@
 					"patching_rect" : [ 546.5, 854.0, 257.0, 60.0 ],
 					"presentation" : 1,
 					"presentation_linecount" : 4,
-					"presentation_rect" : [ 522.0, 444.268016457557678, 268.041222095489502, 60.0 ],
+					"presentation_rect" : [ 522.0, 444.268016457557678, 271.0, 60.0 ],
 					"text" : "Works in dialmode too.\nBad scaling when resizing with 'scale' enabled.\nNo image support (although it can be added, see pictslider)"
 				}
 
@@ -1485,11 +1433,12 @@
 					"presentation_rect" : [ 403.092760920524597, 378.350494265556335, 46.153843402862549, 48.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
+							"parameter_enum" : [ "a", "b", "c", "d", "e" ],
 							"parameter_longname" : "live.dial",
-							"parameter_modmode" : 3,
+							"parameter_modmode" : 4,
+							"parameter_osc_name" : "<default>",
 							"parameter_shortname" : "live.dial",
-							"parameter_type" : 0,
-							"parameter_unitstyle" : 0
+							"parameter_type" : 0
 						}
 
 					}
@@ -1652,7 +1601,8 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 407.216472029685974, 2244.329771161079407, 24.0, 24.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 414.432966470718384, 1276.288588285446167, 24.0, 24.0 ]
+					"presentation_rect" : [ 414.432966470718384, 1276.288588285446167, 24.0, 24.0 ],
+					"svg" : ""
 				}
 
 			}
@@ -1666,42 +1616,16 @@
 					"patcher" : 					{
 						"fileversion" : 1,
 						"appversion" : 						{
-							"major" : 8,
-							"minor" : 6,
-							"revision" : 4,
+							"major" : 9,
+							"minor" : 0,
+							"revision" : 2,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
 						"classnamespace" : "box",
 						"rect" : [ 0.0, 0.0, 640.0, 480.0 ],
-						"bglocked" : 0,
-						"openinpresentation" : 0,
-						"default_fontsize" : 12.0,
-						"default_fontface" : 0,
-						"default_fontname" : "Arial",
-						"gridonopen" : 1,
 						"gridsize" : [ 15.0, 15.0 ],
-						"gridsnaponopen" : 1,
-						"objectsnaponopen" : 1,
-						"statusbarvisible" : 2,
-						"toolbarvisible" : 1,
-						"lefttoolbarpinned" : 0,
-						"toptoolbarpinned" : 0,
-						"righttoolbarpinned" : 0,
-						"bottomtoolbarpinned" : 0,
-						"toolbars_unpinned_last_save" : 0,
-						"tallnewobj" : 0,
-						"boxanimatetime" : 200,
-						"enablehscroll" : 1,
-						"enablevscroll" : 1,
-						"devicewidth" : 0.0,
-						"description" : "",
-						"digest" : "",
-						"tags" : "",
-						"style" : "",
-						"subpatcher_template" : "",
-						"assistshowspatchername" : 0,
 						"boxes" : [ 							{
 								"box" : 								{
 									"id" : "obj-13",
@@ -1852,15 +1776,13 @@
 								}
 
 							}
- ]
+ ],
+						"originid" : "pat-320"
 					}
 ,
 					"patching_rect" : [ 505.154610872268677, 1469.07208263874054, 192.000016000000073, 22.0 ],
 					"saved_object_attributes" : 					{
-						"description" : "",
-						"digest" : "",
-						"globalpatchername" : "",
-						"tags" : ""
+						"globalpatchername" : ""
 					}
 ,
 					"text" : "p round_panel"
@@ -1904,7 +1826,8 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 678.350477457046509, 1418.556621551513672, 24.0, 24.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 522.680383086204529, 1015.463860630989075, 24.0, 24.0 ]
+					"presentation_rect" : [ 522.680383086204529, 1015.463860630989075, 24.0, 24.0 ],
+					"svg" : ""
 				}
 
 			}
@@ -1918,7 +1841,8 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 620.618521928787231, 1418.556621551513672, 24.0, 24.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 614.432955265045166, 1015.463860630989075, 24.0, 24.0 ]
+					"presentation_rect" : [ 614.432955265045166, 1015.463860630989075, 24.0, 24.0 ],
+					"svg" : ""
 				}
 
 			}
@@ -1932,7 +1856,8 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 564.948421955108643, 1418.556621551513672, 24.0, 24.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 614.432955265045166, 988.659738421440125, 24.0, 24.0 ]
+					"presentation_rect" : [ 614.432955265045166, 988.659738421440125, 24.0, 24.0 ],
+					"svg" : ""
 				}
 
 			}
@@ -1946,7 +1871,8 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 505.154610872268677, 1418.556621551513672, 24.0, 24.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 522.680383086204529, 988.659738421440125, 24.0, 24.0 ]
+					"presentation_rect" : [ 522.680383086204529, 988.659738421440125, 24.0, 24.0 ],
+					"svg" : ""
 				}
 
 			}
@@ -2853,6 +2779,7 @@
 
 			}
  ],
+		"originid" : "pat-316",
 		"parameters" : 		{
 			"obj-23" : [ "live.dial", "live.dial", 0 ],
 			"obj-63" : [ "live.dial[1]", "live.dial[1]", 0 ],
