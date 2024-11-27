@@ -7,7 +7,6 @@
 function paint() {
     var value = box.getvalueof();
     var range = box.getattr("_parameter_range");
-    var valueNormalized = value / range[1];
 	var viewsize = mgraphics.size;
 	var width = viewsize[0];
 	var height = viewsize[1];
@@ -21,6 +20,11 @@ function paint() {
 
     var activedialcolor = box.getattr("activedialcolor");
     var activefgdialcolor = box.getattr("activefgdialcolor");
+    var unit_type = box.getattr('_parameter_type');
+	var unit_style = box.getattr('_parameter_unitstyle');
+	var unit_custom = box.getattr('_parameter_units');
+
+    var valueNormalized = unit_type == 2 ? value / (range.length - 1) : value / range[1];
     
     with (mgraphics) {        
         set_line_width(2);                
@@ -77,12 +81,91 @@ function paint() {
             set_font_size(box.getattr('fontsize'));
             set_source_rgba(box.getattr('textcolor'));
             var txt;
-            if (box.getattr('_parameter_unitstyle') == 0) {
-                value = Math.round(value);
-                txt = value.toString();
-            } else {
-                value = round(value, 2);
-                txt = value.toString();
+            switch (unit_style) {
+                case 0:	// Int
+                    txt = Math.round(value).toString();
+                    txt = value.toString();
+                    break;
+                case 1:	// Float
+                    txt = Number(value).toFixed(2);
+                    break;
+                case 2: // Time (ms)
+                    txt = Number(value).toFixed(1);
+                    txt += ' ms';
+                    break;
+                case 3: // Frequency (Hz)
+                    if (value < 1000) {
+                        if (Math.abs(value) < 10) {
+                            txt = Number(value).toFixed(2);
+                        } else if (Math.abs(value) < 100) {
+                            txt = Number(value).toFixed(1);
+                        } else {
+                            txt = Math.round(value);
+                        }
+                        
+                        txt += ' Hz';
+                    } else {
+                        txt = Number(value / 1000).toFixed(1);
+                        txt += ' kHz';
+                    }
+                    break;
+                case 4: // Loudness (dB)
+                    if (value < 10) {
+                        txt = Number(value).toFixed(1);
+                    } else {
+                        txt = Math.round(value);
+                    }
+                    txt += ' dB';
+                    break;
+                case 5: // Percent (%)
+                    if (Math.abs(value) < 10) {
+                        txt = Number(value).toFixed(2);
+                    } else if (Math.abs(value) < 100) {
+                        txt = Number(value).toFixed(1);
+                    } else {
+                        txt = Math.round(value);
+                    }
+                    txt += ' %';
+                    break;
+                case 6: // Pan
+                    txt = Math.round(Math.abs(value));
+                    if (value > 0) {
+                        txt += 'R';
+                    } else if (value < 0) {
+                        txt += 'L';
+                    } else {
+                        txt += 'C';
+                    }
+                    break;
+                case 7: // Semitone
+                    txt = Math.round(value);
+                    if (txt > 0) {
+                        txt = '+' + txt;
+                    }
+                    txt += ' st';
+                    break;
+                case 8: // Midi note
+                    // need to make a note table
+                case 9: // custom
+                    txt = Number(value).toFixed(2);
+                    txt += ' ' + unit_custom.toString();
+                    break;
+                case 10: // Native (Type)
+                    switch(unit_type) {
+                        case 0: // Float
+                            txt = Number(value).toFixed(2);
+                            break;
+                        case 1: // Int
+                            txt = Math.round(value).toString();
+                            break;
+                        case 2: // Enum
+                            txt = range[value];
+                            break;
+                    }
+                    break;
+                default: 
+                    txt = Number(value).toFixed(2);
+                    break;
             }
             var textSize = text_measure(txt);
             move_to((width - textSize[0]) * 0.5, height - offsetTextY);
