@@ -7,11 +7,10 @@ var HALFPI = Math.PI*0.5;
 
 function paint()
 {
-	var viewsize = mgraphics.size;
-	var width = viewsize[0];
-	var height = viewsize[1];
-	var activeCells = box.getvalueof(); // It returns the array of the wich cells are ON
-		/* The length is a multiple of 3, as the array includes the x, y, and value of the cell */
+	var canvasWidth = mgraphics.size[0];
+    var canvasHeight = mgraphics.size[1];
+	var activeCells = box.getvalueof(); // It returns an array of all cells that aren't 0
+		/* The length is a multiple of 3, as the array includes the x, y, and value for each active cell */
 	
 	var cols = box.getattr("columns");
 	var rows = box.getattr("rows");
@@ -39,8 +38,8 @@ function paint()
 	var innerCellHeight = cellHeight - verticalOffset;
 	if (scaleUi) {
 		// Margin and spacing is correct when cells are square, but they don't scale well
-		cellWidth = (width - 2*horizontalMargin)/ cols;	
-		cellHeight = (height - 2*verticalMargin) / rows;
+		cellWidth = (canvasWidth - 2*horizontalMargin)/ cols;	
+		cellHeight = (canvasHeight - 2*verticalMargin) / rows;
 		innerCellWidth = cellWidth - horizontalOffset - horizontalSpacing*0.5;
 		innerCellHeight = cellHeight - verticalOffset - verticalSpacing*0.5 ;
 	}
@@ -58,14 +57,15 @@ function paint()
 		matrix[i] = new Array(rows);
 	// Just created an empty "2-dimensional" array..
 	
-	for (i = 0; i < activeCells.length; i += 3)
+	for (i = 0; i < activeCells.length; i += 3) {
+		// Sets non null, only "activeCells"
 		matrix[activeCells[i]][activeCells[i + 1]] = activeCells[i + 2];
-	// Set non null, only the "activeCells"
+	}
 
 	with (mgraphics)
 	{
 		// Background
-		rectangle(0, 0, width, height);
+		rectangle(0, 0, canvasWidth, canvasHeight);
 		set_source_rgba(bgColor);
 		fill();
 		

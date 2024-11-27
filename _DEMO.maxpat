@@ -313,8 +313,8 @@
 					"patching_rect" : [ 371.0, 1182.474160552024841, 100.0, 100.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 376.288638710975647, 795.876244068145752, 100.0, 100.0 ],
-					"xplace" : [ 0.114742053747177, 0.351855442523956, 0.578659553527832, 0.733298720121384 ],
-					"yplace" : [ 0.876288610696793, 0.134020611047745, 0.701030888557434, 0.391752555370331 ]
+					"xplace" : [ 0.371133999824524, 0.32989688873291, 0.835051499605179, 0.247422666549683 ],
+					"yplace" : [ 0.804123666286468, 0.257731944322586, 0.721649444103241, 0.453608222007751 ]
 				}
 
 			}
@@ -333,8 +333,8 @@
 					"patching_rect" : [ 202.5, 1182.474160552024841, 100.0, 100.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 205.154627680778503, 795.876244068145752, 100.0, 100.0 ],
-					"xplace" : [ 0.114742053747177, 0.351855442523956, 0.578659553527832, 0.733298720121384 ],
-					"yplace" : [ 0.876288610696793, 0.134020611047745, 0.701030888557434, 0.391752555370331 ]
+					"xplace" : [ 0.371133999824524, 0.32989688873291, 0.835051499605179, 0.247422666549683 ],
+					"yplace" : [ 0.804123666286468, 0.257731944322586, 0.721649444103241, 0.453608222007751 ]
 				}
 
 			}
@@ -507,15 +507,15 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-130",
-					"linecount" : 2,
+					"linecount" : 3,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 525.773166418075562, 1659.793721437454224, 227.0, 33.0 ],
+					"patching_rect" : [ 525.773166418075562, 1659.793721437454224, 227.0, 47.0 ],
 					"presentation" : 1,
 					"presentation_linecount" : 2,
-					"presentation_rect" : [ 521.649455308914185, 703.603055238723755, 227.0, 33.0 ],
-					"text" : "Supports backgrounds and knob images!\nNo on-click image."
+					"presentation_rect" : [ 519.649455308914185, 703.603055238723755, 245.0, 33.0 ],
+					"text" : "Supports backgrounds and knob image files!\nNo on-click image."
 				}
 
 			}
@@ -1438,8 +1438,8 @@
 					"patching_rect" : [ 546.923078298568726, 731.0, 195.0, 33.0 ],
 					"presentation" : 1,
 					"presentation_linecount" : 2,
-					"presentation_rect" : [ 522.0, 385.850494265556335, 195.0, 33.0 ],
-					"text" : "Works only in Vertical mode. Text handling isn't 1:1 identical."
+					"presentation_rect" : [ 522.0, 385.252555370330811, 195.0, 33.0 ],
+					"text" : "Vertical mode only. No text shortening or value unit handling"
 				}
 
 			}
@@ -1459,15 +1459,15 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-3",
-					"linecount" : 2,
+					"linecount" : 4,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 546.5, 854.0, 257.0, 33.0 ],
+					"patching_rect" : [ 546.5, 854.0, 257.0, 60.0 ],
 					"presentation" : 1,
-					"presentation_linecount" : 2,
-					"presentation_rect" : [ 521.649455308914185, 458.762860894203186, 257.0, 33.0 ],
-					"text" : "Works in dialmode too.\nBad scaling when resizing with 'scale' enabled."
+					"presentation_linecount" : 4,
+					"presentation_rect" : [ 522.0, 444.268016457557678, 268.041222095489502, 60.0 ],
+					"text" : "Works in dialmode too.\nBad scaling when resizing with 'scale' enabled.\nNo image support (although it can be added, see pictslider)"
 				}
 
 			}
