@@ -65,12 +65,12 @@ function paint()
 	else if (val>valrange)
 		val = valrange;
 
-	// Slider background
-	if (knobshape < 5) {
-		mgraphics.set_source_rgba(box.getattr("elementcolor"));
-		mgraphics.rectangle(inset_edge, inset_end, width-(inset_edge*2), height-(inset_end*2));		
-		mgraphics.fill();
-	}
+	// Slider background (uncomment for Max 8 style)
+	// if (knobshape < 5) {
+	// 	mgraphics.set_source_rgba(box.getattr("elementcolor"));
+	// 	mgraphics.rectangle(inset_edge, inset_end, width-(inset_edge*2), height-(inset_end*2));		
+	// 	mgraphics.fill();
+	// }
 
 	pos = slider_valtopos(val,valrange,width,height,ishoriz);
 
