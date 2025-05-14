@@ -6,7 +6,7 @@ The goal of this repository is to collect simple jsui/jspainter remakes of built
 
 Currently it only contains jspainter files, but it is open to contributions for jsui.
 
-The original commit of this repo include code borrowed from official [Max documentation](https://docs.cycling74.com/max8, the [C74 forum](https://cycling74.com/forums?page=1) and the Max Discord. Original authors and potential editors, when known, are credited in each file.
+The original commit of this repo include code borrowed from official [Max documentation](https://docs.cycling74.com/), the [C74 forum](https://cycling74.com/forums?page=1) and the Max Discord. Original authors and potential editors, when known, are credited in each file.
 
 For supercharged alternatives to builtin objects (dial, filtergraph, function, preset...) with additionnal features and slick looks, check the [JSUI showcase](https://github.com/jamesb93/JSUI-Showcase) repo.
 
@@ -14,7 +14,7 @@ For supercharged alternatives to builtin objects (dial, filtergraph, function, p
 Quite frequently we want to use native Max UI objects, but with small visual changes that aren't possible only with the objects attributes. Recreating the original look of the object from scratch might feel tedious. But now with this repo you can start your jspainter or jsui file from code which already does that. You just need to add your own modifications to it.
 
 ## How to use
-If you're here you probably know how to deal with jspainter and jsui files in Max. Otherwise, start by having a look at the official documentation for [jspainter](https://docs.cycling74.com/max8/vignettes/jspainter), [jsui](https://docs.cycling74.com/max8/vignettes/jsuiobject) and [mgraphics](https://docs.cycling74.com/max8/vignettes/jsmgraphics). The builtin jspaintertest.maxpat is another good place to start (some code here comes from that example).
+If you're here you probably know how to deal with jspainter and jsui files in Max. Otherwise, start by having a look at the official documentation for the [custom UI objects guide](https://docs.cycling74.com/userguide/custom_ui_objects/),  [jspainter](https://docs.cycling74.com/userguide/custom_ui_objects/), [jsui](https://docs.cycling74.com/reference/jsui/)/[v8ui](https://docs.cycling74.com/reference/v8ui/) and [mgraphics](https://docs.cycling74.com/apiref/js/mgraphics/). The builtin `jspaintertest.maxpat` is another good place to start (some code here comes from that example).
 
 ## Contributing
 
