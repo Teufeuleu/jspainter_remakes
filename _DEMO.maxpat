@@ -209,7 +209,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 546.5, 1222.474160552024841, 129.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 521.649455308914185, 835.051499605178833, 129.0, 20.0 ],
+					"presentation_rect" : [ 520.0, 835.0, 129.0, 20.0 ],
 					"text" : "No slider/knob support"
 				}
 
@@ -454,7 +454,7 @@
 					"patching_rect" : [ 525.773166418075562, 1659.793721437454224, 227.0, 47.0 ],
 					"presentation" : 1,
 					"presentation_linecount" : 2,
-					"presentation_rect" : [ 519.649455308914185, 703.603055238723755, 245.0, 33.0 ],
+					"presentation_rect" : [ 520.0, 704.0, 245.0, 33.0 ],
 					"text" : "Supports backgrounds and knob image files!\nNo on-click image."
 				}
 
@@ -536,21 +536,6 @@
 					"outlettype" : [ "float", "", "", "bang" ],
 					"parameter_enable" : 0,
 					"patching_rect" : [ 1109.587633371353149, 136.082466602325439, 203.0, 86.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontface" : 1,
-					"fontsize" : 18.0,
-					"id" : "obj-2",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 776.0, 25.0, 186.0, 27.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 822.0, 17.0, 142.0, 27.0 ],
-					"text" : "jsui alternative"
 				}
 
 			}
@@ -782,7 +767,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 545.0, 117.0, 137.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 521.5, 86.5, 137.0, 20.0 ],
+					"presentation_rect" : [ 520.0, 87.0, 137.0, 20.0 ],
 					"text" : "Messy text when editing"
 				}
 
@@ -1127,13 +1112,14 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 239.175244331359863, 2244.329771161079407, 24.0, 24.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 242.268027663230896, 1276.288588285446167, 24.0, 24.0 ]
+					"presentation_rect" : [ 242.0, 1297.0, 24.0, 24.0 ]
 				}
 
 			}
 , 			{
 				"box" : 				{
 					"id" : "obj-67",
+					"knobshape" : 1,
 					"maxclass" : "slider",
 					"numinlets" : 1,
 					"numoutlets" : 1,
@@ -1141,7 +1127,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 184.536072134971619, 2129.896787881851196, 135.0, 26.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 186.597927689552307, 1228.865910530090332, 135.0, 26.0 ]
+					"presentation_rect" : [ 186.5, 1240.0, 135.0, 26.0 ]
 				}
 
 			}
@@ -1345,15 +1331,15 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-21",
-					"linecount" : 2,
+					"linecount" : 3,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 504.123683094978333, 2127.834932327270508, 254.0, 33.0 ],
+					"patching_rect" : [ 504.123683094978333, 2127.834932327270508, 254.0, 47.0 ],
 					"presentation" : 1,
-					"presentation_linecount" : 2,
-					"presentation_rect" : [ 522.680383086204529, 1225.773127198219299, 254.0, 33.0 ],
-					"text" : "Works in vertical and horizontal, in Indicator+, Rectangle and Indicator flavors"
+					"presentation_linecount" : 3,
+					"presentation_rect" : [ 520.0, 1240.0, 254.0, 47.0 ],
+					"text" : "Works in vertical and horizontal, in Indicator+, Rectangle and Indicator flavors. Triangle, Rounded and Less rounded unsupported."
 				}
 
 			}
@@ -1365,7 +1351,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 545.0, 242.0, 114.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 521.5, 137.5, 114.0, 20.0 ],
+					"presentation_rect" : [ 520.0, 138.0, 114.0, 20.0 ],
 					"text" : "No delayed blink off"
 				}
 
@@ -1373,15 +1359,15 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-17",
-					"linecount" : 2,
+					"linecount" : 3,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 546.923078298568726, 731.0, 195.0, 33.0 ],
+					"patching_rect" : [ 546.923078298568726, 731.0, 195.0, 47.0 ],
 					"presentation" : 1,
-					"presentation_linecount" : 2,
-					"presentation_rect" : [ 522.0, 385.252555370330811, 195.0, 33.0 ],
-					"text" : "Vertical mode only. No text shortening."
+					"presentation_linecount" : 3,
+					"presentation_rect" : [ 520.0, 379.0, 195.0, 47.0 ],
+					"text" : "Vertical mode only. No text shortening.\nHandles multiple unit styles."
 				}
 
 			}
@@ -1393,7 +1379,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 543.5, 1013.0, 241.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 521.649455308914185, 578.350483059883118, 241.0, 20.0 ],
+					"presentation_rect" : [ 520.0, 578.0, 241.0, 20.0 ],
 					"text" : "Works in both vertical and horizontal modes"
 				}
 
@@ -1408,7 +1394,7 @@
 					"patching_rect" : [ 546.5, 854.0, 257.0, 60.0 ],
 					"presentation" : 1,
 					"presentation_linecount" : 4,
-					"presentation_rect" : [ 519.649455308914185, 462.0, 271.0, 60.0 ],
+					"presentation_rect" : [ 520.0, 462.0, 271.0, 60.0 ],
 					"text" : "Works with all dialmode.\nBad scaling when resizing with 'scale' enabled.\nNo image support (although it can be added, see pictslider)"
 				}
 
@@ -1462,7 +1448,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 80.412366628646851, 2246.391626715660095, 41.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 83.505149960517883, 1278.350443840026855, 41.0, 20.0 ],
+					"presentation_rect" : [ 84.0, 1299.0, 41.0, 20.0 ],
 					"text" : "toggle"
 				}
 
@@ -1475,7 +1461,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 83.505149960517883, 2135.051426768302917, 37.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 84.536077737808228, 1231.958693861961365, 37.0, 20.0 ],
+					"presentation_rect" : [ 84.5, 1243.0, 37.0, 20.0 ],
 					"text" : "slider"
 				}
 
@@ -1595,7 +1581,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 407.216472029685974, 2244.329771161079407, 24.0, 24.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 414.432966470718384, 1276.288588285446167, 24.0, 24.0 ]
+					"presentation_rect" : [ 414.0, 1297.0, 24.0, 24.0 ]
 				}
 
 			}
@@ -1799,7 +1785,7 @@
 					"patching_rect" : [ 543.298938632011414, 1375.257654905319214, 218.0, 33.0 ],
 					"presentation" : 1,
 					"presentation_linecount" : 2,
-					"presentation_rect" : [ 521.649455308914185, 946.391699552536011, 194.0, 33.0 ],
+					"presentation_rect" : [ 520.0, 946.0, 194.0, 33.0 ],
 					"text" : "Extra feature: click the \"toggles\" to add *roundness*!!!"
 				}
 
@@ -1814,7 +1800,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 678.350477457046509, 1418.556621551513672, 24.0, 24.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 522.680383086204529, 1015.463860630989075, 24.0, 24.0 ]
+					"presentation_rect" : [ 520.0, 1015.0, 24.0, 24.0 ]
 				}
 
 			}
@@ -1856,7 +1842,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 505.154610872268677, 1418.556621551513672, 24.0, 24.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 522.680383086204529, 988.659738421440125, 24.0, 24.0 ]
+					"presentation_rect" : [ 520.0, 989.0, 24.0, 24.0 ]
 				}
 
 			}
@@ -1986,6 +1972,7 @@
 				"box" : 				{
 					"id" : "obj-15",
 					"jspainterfile" : "slider_jspainter.js",
+					"knobshape" : 1,
 					"maxclass" : "slider",
 					"numinlets" : 1,
 					"numoutlets" : 1,
@@ -1993,7 +1980,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 358.762866497039795, 2129.896787881851196, 135.0, 26.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 358.762866497039795, 1228.865910530090332, 135.0, 26.0 ],
+					"presentation_rect" : [ 358.5, 1240.0, 135.0, 26.0 ],
 					"style" : "default"
 				}
 
@@ -2009,7 +1996,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 362.886577606201172, 1386.597860455513, 109.0, 22.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 521.649455308914185, 916.494794011116028, 109.0, 22.0 ],
+					"presentation_rect" : [ 520.0, 916.0, 109.0, 22.0 ],
 					"text_width" : 66.0
 				}
 
@@ -2038,7 +2025,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 620.618521928787231, 1812.371032476425171, 150.0, 22.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 522.680383086204529, 1091.752516150474548, 150.0, 22.0 ],
+					"presentation_rect" : [ 520.0, 1092.0, 150.0, 22.0 ],
 					"text_width" : 65.0
 				}
 
@@ -2054,7 +2041,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 620.618521928787231, 1838.144226908683777, 150.0, 22.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 522.680383086204529, 1115.463855028152466, 150.0, 22.0 ],
+					"presentation_rect" : [ 520.0, 1115.0, 150.0, 22.0 ],
 					"text_width" : 65.0
 				}
 
@@ -2072,6 +2059,22 @@
 					"presentation" : 1,
 					"presentation_rect" : [ 520.0, 438.0, 126.0, 22.0 ],
 					"text_width" : 70.0
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"attr" : "knobshape",
+					"id" : "obj-2",
+					"maxclass" : "attrui",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 535.505127549171448, 2095.876171231269836, 150.0, 22.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 520.0, 1216.0, 169.206149697303772, 22.0 ],
+					"text_width" : 80.0
 				}
 
 			}
@@ -2354,6 +2357,22 @@
 				"patchline" : 				{
 					"destination" : [ "obj-170", 0 ],
 					"source" : [ "obj-196", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-15", 0 ],
+					"order" : 0,
+					"source" : [ "obj-2", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-67", 0 ],
+					"order" : 1,
+					"source" : [ "obj-2", 0 ]
 				}
 
 			}
