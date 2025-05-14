@@ -30,7 +30,7 @@ function paint() {
         boxesValue = value;
     } else {
         // Radio buttons
-        for (var i = 0; i<size-1; i++) {
+        for (var i = 0; i < size - 1; i++) {
             boxesValue[i] = 0;
         }
         if (value >= 0) boxesValue[value] = 1;
@@ -52,7 +52,7 @@ function paint() {
     mgraphics.set_source_rgba(activeColor);
 
     for (var i = 0; i < size; i++) {
-        var position =  margin * (1 + i) + i * (boxSize + offset);
+        var position = margin * (1 + i) + i * (boxSize + offset);
         if (shape == 0) {
             // Classic
             mgraphics.set_line_width(strokeWidth);
@@ -81,9 +81,9 @@ function paint() {
                     mgraphics.ellipse(margin + 2 * strokeWidth, position + 2 * strokeWidth, boxSize - 4 * strokeWidth, boxSize - 4 * strokeWidth);
                     mgraphics.fill();
                 }
-                
+
             }
-            
+
         } else if (shape == 1) {
             // Square
             mgraphics.set_source_rgba(offColor);
@@ -101,7 +101,7 @@ function paint() {
             mgraphics.set_source_rgba(offColor);
             mgraphics.ellipse(margin, position, boxSize, boxSize);
             mgraphics.fill();
-    
+
             if (boxesValue[i]) {
                 mgraphics.set_source_rgba(activeColor);
                 mgraphics.ellipse(margin, position, boxSize, boxSize);

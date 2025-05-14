@@ -2,9 +2,7 @@
 
 //var tsk = new Task(bangdone, this); 
 
-function paint()
-{
-	//var val = box.getvalueof();
+function paint() {
 	var viewsize = mgraphics.size;
 	var valrange = box.getattr("size");
 	var width = viewsize[0];
@@ -13,17 +11,17 @@ function paint()
 	mgraphics.set_source_rgba(box.getattr("bgcolor"));
 	mgraphics.rectangle(0, 0, width, height);
 	mgraphics.fill();
-	
+
 	mgraphics.set_source_rgba(box.getattr("outlinecolor"));
-	mgraphics.arc(width * .5, height * .5, width * .3, 0, 2*Math.PI);
+	mgraphics.arc(width * .5, height * .5, width * .3, 0, 2 * Math.PI);
 	mgraphics.close_path();
-	mgraphics.set_line_width((2./24.) * width);	// proportional
+	mgraphics.set_line_width((2. / 24.) * width);	// proportional
 	mgraphics.stroke();
 
 	// todo: support attrs
 	if (box.getattr("inclick") || box.getattr("inbang")) {
 		mgraphics.set_source_rgba(box.getattr("blinkcolor"));
-		mgraphics.arc(width * .5, height * .5, width * .15, 0, 2*Math.PI);
+		mgraphics.arc(width * .5, height * .5, width * .15, 0, 2 * Math.PI);
 		mgraphics.close_path();
 		mgraphics.fill();
 	}

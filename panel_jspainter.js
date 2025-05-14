@@ -5,14 +5,14 @@
 // Special feature allowing per-corner rounding with 'annotation "[0, 0, 0, 0]"' messages
 
 var PI = Math.PI;
-var HALFPI = 0.5*Math.PI;
+var HALFPI = 0.5 * Math.PI;
 
 function paint() {
   var viewsize = mgraphics.size;
   var width = viewsize[0];
   var height = viewsize[1];
   var length = width > height ? height : width;
-  
+
   var annotation = box.getattr(box.attrname_forstylemap("annotation"));
   var corners = annotation == "" ? 0 : JSON.parse(box.getattr(box.attrname_forstylemap("annotation")));
   if (corners.constructor === Array) {
@@ -55,14 +55,14 @@ function paint() {
   }
 
   with (mgraphics) {
-    var radius = corner*0.5;
+    var radius = corner * 0.5;
     move_to(corners[0] == 1 ? radius : 0, 0);
     line_to(corners[1] == 1 ? width - radius : width, 0);
-    if (corners[1]) arc(width-radius, radius, radius, -HALFPI, 0); //curve_to(width, 0, width, 0, width, radius);
+    if (corners[1]) arc(width - radius, radius, radius, -HALFPI, 0); //curve_to(width, 0, width, 0, width, radius);
 
     line_to(width, corners[2] == 1 ? height - radius : height);
-    if (corners[2]) arc(width-radius, height-radius, radius, 0, HALFPI);
-      // curve_to(width, height, width, height, width - radius, height);
+    if (corners[2]) arc(width - radius, height - radius, radius, 0, HALFPI);
+    // curve_to(width, height, width, height, width - radius, height);
 
     line_to(corners[3] == 1 ? radius : 0, height);
     if (corners[3]) arc(radius, height - radius, radius, HALFPI, PI); //curve_to(0, height, 0, height, 0, height - radius);

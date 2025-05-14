@@ -7,7 +7,7 @@ var backgroundPicture = box.getattr("bkgndpict");
 var backgroundImage, bgImageWidth, bgImageHeight, bgImageFlag = 0;
 if (backgroundPicture != "<default>" && backgroundPicture != "") {
     // We load the image when the object is instantiated, and we set a flag to paint() there is an image
-    backgroundImage = new Image (backgroundPicture);
+    backgroundImage = new Image(backgroundPicture);
     bgImageWidth = backgroundImage.size[0];
     bgImageHeight = backgroundImage.size[1];
     bgImageFlag = 1;
@@ -17,7 +17,7 @@ var knobPicture = box.getattr("knobpict");
 var knobImage, kbImageWidth, kbImageHeight, knobClickedPos, knobInactivePos, kbImageFlag = 0;
 if (knobPicture != "<default>" && knobPicture != "") {
     // We load the image when the object is instantiated, and we set a flag to paint() there is an image
-    knobImage = new Image (knobPicture);
+    knobImage = new Image(knobPicture);
     kbImageWidth = knobImage.size[0];
     kbImageHeight = knobImage.size[1];
     kbImageFlag = 1;
@@ -48,7 +48,7 @@ function paint() {
     var hasClickedImage = box.getattr("clickedimage");
     var active = box.getattr("active");
 
-    var knobSize = [14,14];
+    var knobSize = [14, 14];
     var knobCircleThickness = 2;
 
     var knobImgSchrink = 1 + hasInactiveImage + hasClickedImage;
@@ -67,7 +67,7 @@ function paint() {
             // If the image path has changed, reload it
             backgroundPicture = curBgPicture;
             if (curBgPicture != "<default>" && curBgPicture != "") {
-                backgroundImage = new Image (backgroundPicture);
+                backgroundImage = new Image(backgroundPicture);
                 bgImageWidth = backgroundImage.size[0];
                 bgImageHeight = backgroundImage.size[1];
                 bgImageFlag = 1;
@@ -92,7 +92,7 @@ function paint() {
         // If the image path has changed, reload it
         knobPicture = curKnobPicture;
         if (curKnobPicture != "<default>" && curKnobPicture != "") {
-            knobImage = new Image (knobPicture);
+            knobImage = new Image(knobPicture);
             kbImageWidth = knobImage.size[0];
             kbImageHeight = knobImage.size[1];
             kbImageFlag = 1;
@@ -105,7 +105,7 @@ function paint() {
     var knobPosition = [
         (knobValue[0] - leftValue) / (rightValue - leftValue),
         (knobValue[1] - topValue) / (bottomValue - topValue)
-    ]; 
+    ];
 
     // Calculate knob canvas coordinated
     var isClicked = 0; // No way to handle mouse interaction
@@ -121,7 +121,7 @@ function paint() {
     if (kbImageFlag) {
         mgraphics.save();
         mgraphics.translate(knobPosition);
-        if (!active) mgraphics.translate(-knobOffset,0);
+        if (!active) mgraphics.translate(-knobOffset, 0);
         mgraphics.image_surface_draw(knobImage, [knobOffset, 0, knobOffset + kbImageWidth / knobImgSchrink, kbImageHeight]);
         mgraphics.restore();
     } else {

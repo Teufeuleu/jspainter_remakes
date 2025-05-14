@@ -38,13 +38,13 @@ function paint() {
 
         rectangle(0, 0, canvasWidth, canvasHeight);
         fill();
-        
+
         // Draw slider array.
         set_source_rgba(sliderColor);
 
         // Constraining sliderSpacing to a reasonnable value
         sliderSpacing = Math.min(sliderSpacing, sliderWidth);
-        
+
         var sliderX = 0;
         for (var i = 0; i < sliderValue.length; i++) {
             sliderX += sliderSpacing / 2;
@@ -57,32 +57,32 @@ function paint() {
                 if (sliderSigned) {
                     // Bipolar slider ('signed' enabled)
                     var yOrigin = (1 - normalize_value(0, sliderRange)) * canvasHeight;
-                    var sLength = - sliderY + yOrigin*0.5;
+                    var sLength = - sliderY + yOrigin * 0.5;
                     if (sliderValue[i] <= 0) {
                         yOrigin -= 1;
                         sLength += 1
                     }
                     if (Math.abs(sLength) < 1) sLength = 1;
                     rectangle(
-                        sliderX, 
-                        yOrigin, 
+                        sliderX,
+                        yOrigin,
                         sliderWidthAdjusted,
                         sLength
                     );
                 } else {
                     rectangle(
-                        sliderX, 
-                        canvasHeight, 
+                        sliderX,
+                        canvasHeight,
                         sliderWidthAdjusted,
-                        -canvasHeight+Math.min(canvasHeight - sliderY, canvasHeight)
+                        -canvasHeight + Math.min(canvasHeight - sliderY, canvasHeight)
                     );
                 }
                 fill();
             } else {
                 // Thin Line
                 rectangle(
-                    sliderX, 
-                    Math.min(canvasHeight - sliderY, canvasHeight - sliderThickness), 
+                    sliderX,
+                    Math.min(canvasHeight - sliderY, canvasHeight - sliderThickness),
                     sliderWidthAdjusted,
                     sliderThickness
                 );

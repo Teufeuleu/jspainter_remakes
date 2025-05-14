@@ -1,7 +1,7 @@
 // Original code: Théophile Clet - contact@tflcl.xyz
 
 function paint() {
-	var canvasWidth = mgraphics.size[0];
+    var canvasWidth = mgraphics.size[0];
     var canvasHeight = mgraphics.size[1];
     var backgroundColor = box.getattr('bgcolor');
     var borderColor = box.getattr('color');

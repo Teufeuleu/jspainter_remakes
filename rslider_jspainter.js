@@ -27,17 +27,17 @@ function paint() {
     var margin = 2; // Margin at the start and the end
     var sideMargin = 1;
 
-    
-    var ishoriz = slider_ishorizontal(canvasWidth,canvasHeight);
-	if (!ishoriz) {
-		// Vertical mode
-		var tmp = canvasWidth;
-		canvasWidth = canvasHeight;
-		canvasHeight = tmp;
-		mgraphics.identity_matrix();
-		mgraphics.translate(0, canvasWidth);
-		mgraphics.rotate(-1.57079633);
-	}
+
+    var ishoriz = slider_ishorizontal(canvasWidth, canvasHeight);
+    if (!ishoriz) {
+        // Vertical mode
+        var tmp = canvasWidth;
+        canvasWidth = canvasHeight;
+        canvasHeight = tmp;
+        mgraphics.identity_matrix();
+        mgraphics.translate(0, canvasWidth);
+        mgraphics.rotate(-1.57079633);
+    }
 
     // Draw background
     mgraphics.set_source_rgba(backgroundColor);
@@ -59,7 +59,7 @@ function paint() {
     var sliderPosition = [
         (sliderValue[0] - min) / size,
         (sliderValue[1] - min) / size
-    ]; 
+    ];
 
     // Calculate knob canvas coordinated
     sliderPosition[0] = sliderPosition[0] * (canvasWidth - 2 * margin);
@@ -73,13 +73,12 @@ function paint() {
     mgraphics.fill();
 }
 
-function slider_ishorizontal(width,height)
-{
-	var orient = box.getattr("orientation");
-	
-	// 0=automatic, 1=horizontal, 2=vertical
-	if (orient==0)
-		return (width>height)
-	else
-		return (orient==1);
+function slider_ishorizontal(width, height) {
+    var orient = box.getattr("orientation");
+
+    // 0=automatic, 1=horizontal, 2=vertical
+    if (orient == 0)
+        return (width > height)
+    else
+        return (orient == 1);
 }

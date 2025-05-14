@@ -7,12 +7,12 @@
 function paint() {
     var value = box.getvalueof();
     var range = box.getattr("_parameter_range");
-	var viewsize = mgraphics.size;
-	var width = viewsize[0];
-	var height = viewsize[1];
+    var viewsize = mgraphics.size;
+    var width = viewsize[0];
+    var height = viewsize[1];
 
     var midPoint = [
-        width / 2, 
+        width / 2,
         height / 2
     ];
     var offsetY = 1.5;
@@ -21,43 +21,43 @@ function paint() {
     var activedialcolor = box.getattr("activedialcolor");
     var activefgdialcolor = box.getattr("activefgdialcolor");
     var unit_type = box.getattr('_parameter_type');
-	var unit_style = box.getattr('_parameter_unitstyle');
-	var unit_custom = box.getattr('_parameter_units');
+    var unit_style = box.getattr('_parameter_unitstyle');
+    var unit_custom = box.getattr('_parameter_units');
 
     var valueNormalized = unit_type == 2 ? value / (range.length - 1) : value / range[1];
-    
-    with (mgraphics) {        
-        set_line_width(2);                
+
+    with (mgraphics) {
+        set_line_width(2);
         set_source_rgba(activefgdialcolor);
-        
+
         arc(
-            midPoint[0], 
-            midPoint[1] + offsetY, 
-            12, 
+            midPoint[0],
+            midPoint[1] + offsetY,
+            12,
             Math.min(-230 + valueNormalized * 300, 52) * Math.PI / 180,
             60 * Math.PI / 180
         );
         stroke();
-        
+
         set_line_width(2.5);
         set_source_rgba(activedialcolor);
-        
+
         arc(
-            midPoint[0], 
-            midPoint[1] + offsetY, 
-            12, 
+            midPoint[0],
+            midPoint[1] + offsetY,
+            12,
             -240 * Math.PI / 180,
             (-240 + valueNormalized * 300) * Math.PI / 180
         );
-        stroke();        
-        
+        stroke();
+
         set_line_cap("round");
         set_source_rgba(activefgdialcolor);
         line_to_angle(
-            midPoint[0], 
-            midPoint[1] + offsetY, 
-            -240 + valueNormalized * 300, 
-            0, 
+            midPoint[0],
+            midPoint[1] + offsetY,
+            -240 + valueNormalized * 300,
+            0,
             12
         );
         stroke();
@@ -102,7 +102,7 @@ function paint() {
                         } else {
                             txt = Math.round(value);
                         }
-                        
+
                         txt += ' Hz';
                     } else {
                         txt = Number(value / 1000).toFixed(1);
@@ -145,13 +145,13 @@ function paint() {
                     txt += ' st';
                     break;
                 case 8: // Midi note
-                    // need to make a note table
+                // need to make a note table
                 case 9: // custom
                     txt = Number(value).toFixed(2);
                     txt += ' ' + unit_custom.toString();
                     break;
                 case 10: // Native (Type)
-                    switch(unit_type) {
+                    switch (unit_type) {
                         case 0: // Float
                             txt = Number(value).toFixed(2);
                             break;
@@ -163,7 +163,7 @@ function paint() {
                             break;
                     }
                     break;
-                default: 
+                default:
                     txt = Number(value).toFixed(2);
                     break;
             }
@@ -181,7 +181,7 @@ function line_to_angle(x, y, degrees, offset, length) {
 
     var origin = [cosAngle * offset + x, sinAngle * offset + y];
     var destination = [
-        cosAngle * length + origin[0], 
+        cosAngle * length + origin[0],
         sinAngle * length + origin[1]
     ];
 

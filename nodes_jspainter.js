@@ -61,7 +61,7 @@ function paint() {
         var nodeThisColor = nodeColors[i % candycane].slice();
 
         if (!nodeActive) nodeThisColor[3] *= disabledAlpha;
-        
+
         mgraphics.set_source_rgba(nodeThisColor);
         drawEllipseCenter(nodeX, nodeY, nodeWidth, nodeHeight, "zone");
     }
