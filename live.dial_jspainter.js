@@ -20,9 +20,14 @@ function paint() {
 
     var activedialcolor = box.getattr("activedialcolor");
     var activefgdialcolor = box.getattr("activefgdialcolor");
+    var activeneedlecolor = box.getattr("activeneedlecolor");
     var unit_type = box.getattr('_parameter_type');
     var unit_style = box.getattr('_parameter_unitstyle');
     var unit_custom = box.getattr('_parameter_units');
+
+    var text_font = box.getattr('fontname');
+	var text_fontsize = box.getattr('fontsize');
+	var text_color = box.getattr('textcolor');
 
     var valueNormalized = unit_type == 2 ? value / (range.length - 1) : value / range[1];
 
@@ -52,7 +57,7 @@ function paint() {
         stroke();
 
         set_line_cap("round");
-        set_source_rgba(activefgdialcolor);
+        set_source_rgba(activeneedlecolor);
         line_to_angle(
             midPoint[0],
             midPoint[1] + offsetY,
@@ -65,9 +70,9 @@ function paint() {
         // Dial name
         // Doesn't do string shortening like original live.dial
         if (box.getattr("showname")) {
-            select_font_face(box.getattr('fontname'));
-            set_font_size(box.getattr('fontsize'));
-            set_source_rgba(box.getattr('textcolor'));
+            select_font_face(text_font);
+            set_font_size(text_fontsize);
+            set_source_rgba(text_color);
             var shortName = box.getattr('_parameter_shortname');
             var textSize = text_measure(shortName);
             move_to((width - textSize[0]) * 0.5, textSize[1] - offsetTextY);
@@ -76,10 +81,11 @@ function paint() {
 
         //Dial value
         // Does mostly work with unit types Int and Float
-        if (box.getattr("shownumber")) {
-            select_font_face(box.getattr('fontname'));
-            set_font_size(box.getattr('fontsize'));
-            set_source_rgba(box.getattr('textcolor'));
+        // Doesn't draw when editing the value by typing on the keyboard, thanks to the undocumented attribute 'editactive'. See here: https://discord.com/channels/289378508247924738/1387695212624740444/1389810710053257228
+        if (box.getattr("shownumber") && !box.getattr("editactive")) {
+            select_font_face(text_font);
+            set_font_size(text_fontsize);
+            set_source_rgba(text_color);
             var txt;
             switch (unit_style) {
                 case 0:	// Int
